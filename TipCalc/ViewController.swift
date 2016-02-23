@@ -53,8 +53,16 @@ class ViewController: UIViewController {
         let tipAmount = billAmount * tipPercentage
         let total = billAmount + tipAmount
         
-        tipLabel.text = String(format: "\(moneySymbol)%.2f", tipAmount)
-        totalLabel.text = String(format: "\(moneySymbol)%.2f", total)
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+//        let langId = NSLocale.currentLocale().objectForKey(NSLocaleLanguageCode) as! String
+//        let countryId = NSLocale.currentLocale().objectForKey(NSLocaleCountryCode) as! String
+//        let language = "\(langId)-\(countryId)"
+//        NSLocale(localeIdentifier: language)
+        formatter.locale = NSLocale.currentLocale()
+        
+        tipLabel.text = formatter.stringFromNumber(tipAmount)
+            totalLabel.text = formatter.stringFromNumber(total)
     }
     
     
@@ -148,14 +156,20 @@ class ViewController: UIViewController {
     }
     
     func getCurrencySymbol() -> String {
-        
+//        let langId = NSLocale.currentLocale().objectForKey(NSLocaleLanguageCode) as! String
+//        let countryId = NSLocale.currentLocale().objectForKey(NSLocaleCountryCode) as! String
+//        let language = "\(langId)-\(countryId)"
+//        print(language)
 
-        let langId = NSLocale.currentLocale().objectForKey(NSLocaleLanguageCode) as! String
-        let countryId = NSLocale.currentLocale().objectForKey(NSLocaleCountryCode) as! String
-        let language = "\(langId)-\(countryId)" // en-US on my machine
-        let locale = NSLocale(localeIdentifier: language as String)
+        let pre = NSLocale.preferredLanguages()[0]
+        let locale = NSLocale(localeIdentifier: pre)
+//        NSLocale.currentLocale()
+//        print(locale)
+        
+//        NSLocale(localeIdentifier: language as String)
         let symbol = locale.objectForKey(NSLocaleCurrencySymbol) as? String
-        print(symbol!)
+//        print(symbol)
+
         return symbol!
 
 }
