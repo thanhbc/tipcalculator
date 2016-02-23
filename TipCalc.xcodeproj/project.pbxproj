@@ -12,6 +12,7 @@
 		87A4EE261C7AEF7300676E26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A4EE241C7AEF7300676E26 /* Main.storyboard */; };
 		87A4EE281C7AEF7300676E26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A4EE271C7AEF7300676E26 /* Assets.xcassets */; };
 		87A4EE2B1C7AEF7300676E26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A4EE291C7AEF7300676E26 /* LaunchScreen.storyboard */; };
+		87A4EE331C7AFD6F00676E26 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4EE321C7AFD6F00676E26 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		87A4EE271C7AEF7300676E26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87A4EE2A1C7AEF7300676E26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87A4EE2C1C7AEF7300676E26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87A4EE321C7AFD6F00676E26 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				87A4EE271C7AEF7300676E26 /* Assets.xcassets */,
 				87A4EE291C7AEF7300676E26 /* LaunchScreen.storyboard */,
 				87A4EE2C1C7AEF7300676E26 /* Info.plist */,
+				87A4EE321C7AFD6F00676E26 /* SettingsViewController.swift */,
 			);
 			path = TipCalc;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			files = (
 				87A4EE231C7AEF7300676E26 /* ViewController.swift in Sources */,
 				87A4EE211C7AEF7300676E26 /* AppDelegate.swift in Sources */,
+				87A4EE331C7AFD6F00676E26 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +253,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TipCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = coderschool.vn.TipCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -260,6 +265,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TipCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = coderschool.vn.TipCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
